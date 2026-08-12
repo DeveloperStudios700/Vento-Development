@@ -1416,3 +1416,198 @@ footer div p {
     }
 
 }
+
+/* =====================================================
+   FORCE APPLICATION MODAL TO BE A REAL POPUP
+   ===================================================== */
+
+.application-modal {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999999 !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+.application-modal.active {
+    display: flex !important;
+}
+
+.application-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background: rgba(0, 5, 15, 0.86) !important;
+
+    backdrop-filter: blur(12px) !important;
+}
+
+.application-box {
+    position: relative !important;
+    z-index: 2 !important;
+
+    width: min(760px, 95vw) !important;
+    max-height: 90vh !important;
+
+    overflow-y: auto !important;
+
+    box-sizing: border-box !important;
+
+    padding: 40px !important;
+
+    margin: 0 !important;
+
+    border: 1px solid rgba(80, 175, 255, 0.3) !important;
+    border-radius: 18px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #06203d,
+            #020b18
+        ) !important;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.75) !important;
+}
+
+.application-close {
+    position: absolute !important;
+
+    top: 15px !important;
+    right: 15px !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid rgba(100, 180, 255, 0.25) !important;
+    border-radius: 50% !important;
+
+    background: rgba(255, 255, 255, 0.05) !important;
+
+    color: white !important;
+
+    font-size: 22px !important;
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+}
+
+.application-box h2 {
+    margin: 0 0 12px !important;
+
+    color: #eef8ff !important;
+
+    font-size: 38px !important;
+    line-height: 1.1 !important;
+}
+
+.application-box h2 em {
+    color: #42aaff !important;
+    font-style: normal !important;
+}
+
+.application-intro {
+    margin: 0 0 28px !important;
+
+    color: #8098b1 !important;
+
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+
+.form-grid {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 17px !important;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 7px !important;
+}
+
+.form-group.full {
+    grid-column: 1 / -1 !important;
+}
+
+.form-group label {
+    color: #a9c5dd !important;
+
+    font-size: 10px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    padding: 13px !important;
+
+    border: 1px solid rgba(85, 175, 240, 0.18) !important;
+    border-radius: 9px !important;
+
+    outline: none !important;
+
+    background: rgba(0, 10, 23, 0.7) !important;
+
+    color: white !important;
+
+    font-family: inherit !important;
+    font-size: 13px !important;
+}
+
+.form-group textarea {
+    min-height: 110px !important;
+    resize: vertical !important;
+}
+
+.application-submit {
+    margin-top: 20px !important;
+}
+
+@media (max-width: 700px) {
+
+    .application-box {
+        width: 95vw !important;
+        padding: 28px 20px !important;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form-group.full {
+        grid-column: auto !important;
+    }
+
+    .application-box h2 {
+        font-size: 30px !important;
+    }
+}
