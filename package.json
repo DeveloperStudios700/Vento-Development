@@ -1,14 +1,17 @@
 {
-  "name": "vento-development-server",
+  "name": "vento-development",
   "version": "1.0.0",
-  "description": "Vento Development careers application backend",
+  "description": "Vento Development website API and Discord bot",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "bot": "node bot.js",
+    "dev": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0"
   }
 }
